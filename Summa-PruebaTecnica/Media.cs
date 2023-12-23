@@ -1,52 +1,74 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Summa_PruebaTecnica
+﻿namespace Summa_PruebaTecnica
 {
     public class Media
     {
         public double AgentA(List<double> LstNumbers)
         {
-            double sum = LstNumbers.Sum();
-            double media = sum / LstNumbers.Count;
+            try
+            {
 
-            return media;
+
+                double sum = LstNumbers.Sum();
+                double media = sum / LstNumbers.Count;
+
+                return media;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Se presento un error en el proceso" + e.ToString());
+                return 0;
+            }
         }
 
         public double AgentB(List<double> LstNumbers)
         {
-            double sumaInversos = 0.0;
-            foreach (double numero in LstNumbers)
+            try
             {
-                sumaInversos += 1.0 / numero;
-            }
-            
-            double mediaArmonica = LstNumbers.Count / sumaInversos;
 
-            return mediaArmonica;
+                double sumaInversos = 0.0;
+                foreach (double numero in LstNumbers)
+                {
+                    sumaInversos += 1.0 / numero;
+                }
+
+                double mediaArmonica = LstNumbers.Count / sumaInversos;
+
+                return mediaArmonica;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Se presento un error en el proceso" + e.ToString());
+                return 0;
+            }
         }
 
         public double AgentC(List<double> LstNumbers)
         {
-            // Se ordena la lista
-            LstNumbers.Sort();
+            try
+            {
 
-            // se obtiene la pocicion de la mitad
-            int mitad = LstNumbers.Count / 2;
+                // Se ordena la lista
+                LstNumbers.Sort();
 
-            // Validacion si la cantidad de datos es par o impar
-            if (LstNumbers.Count % 2 == 0)
-            {                
-                double valor1 = LstNumbers[mitad - 1];
-                double valor2 = LstNumbers[mitad];
-                return (valor1 + valor2) / 2.0;
+                // se obtiene la pocicion de la mitad
+                int mitad = LstNumbers.Count / 2;
+
+                // Validacion si la cantidad de datos es par o impar
+                if (LstNumbers.Count % 2 == 0)
+                {
+                    double valor1 = LstNumbers[mitad - 1];
+                    double valor2 = LstNumbers[mitad];
+                    return (valor1 + valor2) / 2.0;
+                }
+                else
+                {
+                    return LstNumbers[mitad];
+                }
             }
-            else
-            {                
-                return LstNumbers[mitad];
+            catch (Exception e)
+            {
+                Console.WriteLine("Se presento un error en el proceso" + e.ToString());
+                return 0;
             }
         }
 

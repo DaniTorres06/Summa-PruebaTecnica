@@ -6,8 +6,8 @@ Console.WriteLine("**************************");
 Console.WriteLine(" ");
 
 
-List<double> numeros = new List<double> { 10, 6, 15, 4 };
-int escaler = 30;
+List<double> vLstNumbers = new List<double> { 10, 6, 15, 4 };
+int vIntEscaler = 30;
 
 Media vObjMedia = new Media();
 Staircase vObjStaircase = new Staircase();
@@ -15,42 +15,41 @@ Staircase vObjStaircase = new Staircase();
 Console.WriteLine("* Funcionalidad 1 *");
 Console.WriteLine(" ");
 
-if (numeros.Count == 0)
+if (vLstNumbers.Count == 0)
 {
     Console.WriteLine("The number list is empty");
 }
 else
 {
-    Console.WriteLine("The Media is: " + vObjMedia.AgentA(numeros));
-    Console.WriteLine("The Media armonica is : " + vObjMedia.AgentB(numeros));
-    Console.WriteLine("The Mediana is : " + vObjMedia.AgentC(numeros));
+    Console.WriteLine("The Media is: " + vObjMedia.AgentA(vLstNumbers));
+    Console.WriteLine("The Media armonica is : " + vObjMedia.AgentB(vLstNumbers));
+    Console.WriteLine("The Mediana is : " + vObjMedia.AgentC(vLstNumbers));
 }
 
 Console.WriteLine(" ");
 Console.WriteLine("* Funcionalidad 2 *");
 Console.WriteLine(" ");
 
-if (escaler == 0 || escaler == 1)
+if (vIntEscaler == 0 || vIntEscaler == 1)
 {
     Console.WriteLine("A number greater than zero or one is required to display the result");
 }
 else
 {
-    if(escaler > 100)
+    if (vIntEscaler > 100)
     {
         Console.WriteLine("No se permite valores mayores a 100");
     }
     else
     {
         Console.WriteLine("Reply agent A: ");
-        vObjStaircase.AgentA(escaler);
+        vObjStaircase.AgentA(vIntEscaler);
         Console.WriteLine(" ");
         Console.WriteLine("Reply agent B: ");
-        vObjStaircase.AgentB(escaler);
+        vObjStaircase.AgentB(vIntEscaler);
         Console.WriteLine(" ");
         Console.WriteLine("Reply agent C: ");
-        vObjStaircase.AgentC(escaler);
+        vObjStaircase.AgentC(vIntEscaler);
         Console.WriteLine(" ");
     }
 }
-    
