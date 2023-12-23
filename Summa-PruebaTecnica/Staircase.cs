@@ -1,114 +1,121 @@
-﻿namespace Summa_PruebaTecnica
+﻿using System.Text;
+
+namespace Summa_PruebaTecnica
 {
     public class Staircase
     {
-        public void AgentA(int size)
+        public string AgentA(int size)
         {
             try
             {
+                StringBuilder resultado = new StringBuilder();
+
                 for (int i = 1; i <= size; i++)
                 {
                     for (int j = 0; j < size - i; j++)
                     {
-                        Console.Write(" ");
+                        resultado.Append(" ");
                     }
 
                     for (int k = 0; k < i; k++)
                     {
-                        Console.Write("#");
+                        resultado.Append("#");
                     }
 
-                    Console.WriteLine();
+                    resultado.AppendLine();
                 }
+                return resultado.ToString();
             }
             catch (Exception e)
             {
                 Console.WriteLine("Se presento un error en el proceso" + e.ToString());
+                return string.Empty;
             }
         }
 
-        public void AgentB(int size)
+        public string AgentB(int size)
         {
             try
             {
-
+                StringBuilder resultado = new StringBuilder();
 
                 for (int i = size; i >= 1; i--)
                 {
 
                     for (int j = 0; j < size - i; j++)
                     {
-                        Console.Write(" ");
+                        resultado.Append(" ");
                     }
-
 
                     for (int k = 0; k < i; k++)
                     {
-                        Console.Write("#");
+                        resultado.Append("#");
                     }
 
-                    Console.WriteLine();
+                    resultado.AppendLine();
                 }
+                return resultado.ToString();
             }
             catch (Exception e)
             {
                 Console.WriteLine("Se presento un error en el proceso" + e.ToString());
+                return string.Empty;
             }
         }
 
-        public void AgentC(int size)
+        public string AgentC(int size)
         {
             try
             {
+                StringBuilder resultado = new StringBuilder();
 
                 for (int i = 1; i <= size; i++)
                 {
                     for (int j = 0; j < size - i; j++)
                     {
-                        Console.Write(" ");
+                        resultado.Append(" ");
                     }
 
                     for (int k = 0; k < i; k++)
                     {
-                        Console.Write("#");
+                        resultado.Append("#");
                     }
 
                     for (int k = 0; k < i - 1; k++)
                     {
-                        Console.Write("#");
+                        resultado.Append("#");
                     }
 
-                    Console.WriteLine();
+                    resultado.AppendLine();
                 }
 
 
 
                 for (int i = size - 1; i >= 1; i--)
                 {
-
                     for (int j = 0; j < size - i; j++)
                     {
-                        Console.Write(" ");
+                        resultado.Append(" ");
                     }
-
 
                     for (int k = 0; k < i; k++)
                     {
-                        Console.Write("#");
+                        resultado.Append("#");
                     }
 
                     for (int k = 0; k < i - 1; k++)
                     {
-                        Console.Write("#");
+                        resultado.Append("#");
                     }
 
-
-                    Console.WriteLine();
+                    resultado.AppendLine();
                 }
+                return resultado.ToString();
             }
             catch (Exception e)
             {
                 Console.WriteLine("Se presento un error en el proceso" + e.ToString());
+                return string.Empty;
             }
         }
     }

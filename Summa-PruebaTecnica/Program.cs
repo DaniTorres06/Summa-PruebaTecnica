@@ -7,7 +7,7 @@ Console.WriteLine(" ");
 
 
 List<double> vLstNumbers = new List<double> { 10, 6, 15, 4 };
-int vIntEscaler = 30;
+int vIntEscaler = 4;
 
 Media vObjMedia = new Media();
 Staircase vObjStaircase = new Staircase();
@@ -43,12 +43,13 @@ else
     else
     {
         Console.WriteLine("Reply agent A: ");
-        vObjStaircase.AgentA(vIntEscaler);
+        Console.WriteLine("" + vObjStaircase.AgentA(vIntEscaler));
         Console.WriteLine(" ");
         Console.WriteLine("Reply agent B: ");
-        vObjStaircase.AgentB(vIntEscaler);
+        Console.WriteLine("" + vObjStaircase.AgentB(vIntEscaler));
         Console.WriteLine(" ");
         Console.WriteLine("Reply agent C: ");
+        Console.WriteLine("" + vObjStaircase.AgentC(vIntEscaler));
         vObjStaircase.AgentC(vIntEscaler);
         Console.WriteLine(" ");
     }

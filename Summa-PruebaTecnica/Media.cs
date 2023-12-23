@@ -6,8 +6,6 @@
         {
             try
             {
-
-
                 double sum = LstNumbers.Sum();
                 double media = sum / LstNumbers.Count;
 
@@ -24,7 +22,6 @@
         {
             try
             {
-
                 double sumaInversos = 0.0;
                 foreach (double numero in LstNumbers)
                 {
