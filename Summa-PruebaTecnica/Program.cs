@@ -17,13 +17,13 @@ Console.WriteLine(" ");
 
 if (numeros.Count == 0)
 {
-    Console.WriteLine("La lista de numeros esta vacia");
+    Console.WriteLine("The number list is empty");
 }
 else
 {
-    Console.WriteLine("La Media es: " + vObjMedia.AgentA(numeros));
-    Console.WriteLine("La Media armonica es de : " + vObjMedia.AgentB(numeros));
-    Console.WriteLine("La Mediana es de : " + vObjMedia.AgentC(numeros));
+    Console.WriteLine("The Media is: " + vObjMedia.AgentA(numeros));
+    Console.WriteLine("The Media armonica is : " + vObjMedia.AgentB(numeros));
+    Console.WriteLine("The Mediana is : " + vObjMedia.AgentC(numeros));
 }
 
 Console.WriteLine(" ");
@@ -32,7 +32,7 @@ Console.WriteLine(" ");
 
 if (escaler == 0 || escaler == 1)
 {
-    Console.WriteLine("Se requiere un numero mayor a cero o uno para visualizar el resultado");
+    Console.WriteLine("A number greater than zero or one is required to display the result");
 }
 else
 {
@@ -42,13 +42,13 @@ else
     }
     else
     {
-        Console.WriteLine("Respuesta agente A: ");
+        Console.WriteLine("Reply agent A: ");
         vObjStaircase.AgentA(escaler);
         Console.WriteLine(" ");
-        Console.WriteLine("Respuesta agente B: ");
+        Console.WriteLine("Reply agent B: ");
         vObjStaircase.AgentB(escaler);
         Console.WriteLine(" ");
-        Console.WriteLine("Respuesta agente C: ");
+        Console.WriteLine("Reply agent C: ");
         vObjStaircase.AgentC(escaler);
         Console.WriteLine(" ");
     }
